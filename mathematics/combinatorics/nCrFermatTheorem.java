@@ -61,7 +61,7 @@ public class nCrFermatTheorem
         return power(n, p-2, p);
     }
 
-    private static long nCr(int n, int r, long p)
+    public static long nCr(int n, int r, long p)
     {
         // Pre-compute factorials. The F[] will only be computed once in case there are repetitive calls,
         // hence, saving time
