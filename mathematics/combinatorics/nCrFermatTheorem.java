@@ -6,14 +6,14 @@ CONSTRAINTS:
     1. p is prime
     2. n < p
 
-OUTPUT: nCr % P
+OUTPUT: nCr % p
 
 LOGIC:
     nCr = n! / (r! * (n-r!))
     nCr % p = [n! / (r! * (n-r)!)] % p
     nCr % p = [n! / (modInverse(r!) * modInverse((n-r)!))] % p      # Using fermat's little theorem
 
-TIME COMPLEXITY: max(O(n), O(log p))        # Pre-computation of factorials can reduce the complexity to O(1)
+TIME COMPLEXITY: max(O(n), O(log2(p)))        # Pre-computation of factorials can reduce the complexity to O(1)
 SPACE COMPLEXITY: O(n)
  */
 public class nCrFermatTheorem
