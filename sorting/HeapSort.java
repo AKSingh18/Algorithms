@@ -36,6 +36,7 @@ public class HeapSort
         final int n = A.length;
         for (int i = n/2-1;i >= 0;i--) maxHeapify(A, n, i);
     }
+    
     public static void sort(int[] A)
     {
         final int n = A.length;
@@ -44,7 +45,7 @@ public class HeapSort
 
         for (int i = 0;i < n-1;i++)
         {
-            swap(A, 0,n-i-1);
+            swap(A, 0, n-i-1);
             maxHeapify(A, n-i-1, 0);
         }
     }
